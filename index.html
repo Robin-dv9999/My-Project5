@@ -1,1 +1,260 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Underworld Syndicate // The Dark Empire of Robin-DV</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Plus+Jakarta+Sans:wght@400;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+    <div class="store-container">
+        
+        <!-- HEADER KEKUASAAN MAFIA -->
+        <header class="store-header mafia-header">
+            <div class="brand-holder">
+                <div class="store-logo mafia-logo">
+                    <span>🗡️</span>
+                </div>
+                <div>
+                    <h1 class="mafia-title">THE SYNDICATE</h1>
+                    <small>Supreme Leader: <strong class="red-text"> Robin-DV</strong></small>
+                </div>
+            </div>
+            <a href="https://robin-dv9999.github.io/My-Project4/" class="cart-badge-btn mafia-badge" title="Gudang Vault">🛒 Vault</a>
+        </header>
+
+        <!-- LIVE CLOCK & RADAR STATUS -->
+        <div class="flash-sale-bar blood-badge" style="display: flex; justify-content: space-between; align-items: center;">
+            <span>⏱️ LOCAL TIME: <strong id="live-time" class="gold-glow">00:00:00</strong></span>
+            <span class="countdown-timer red-text" id="radar-status">📡 RADAR: ONLINE</span>
+        </div>
+
+        <!-- STATISTIK KEKUATAN & KEKAYAAN GELAP -->
+        <div class="stats-grid">
+            <div class="stat-card mafia-card">
+                <small class="red-text">TOTAL UNDERWORLD ASSETS</small>
+                <strong class="gold-glow">$850,000,000</strong>
+            </div>
+            <div class="stat-card mafia-card">
+                <small class="red-text">LOYALTY INDEX</small>
+                <strong class="green-text">100% UNBREAKABLE</strong>
+            </div>
+        </div>
+
+        <!-- AUDIO ATMOSPHERE PLAYER (Berguna untuk suara latar terminal) -->
+        <section class="command-section mafia-card" style="padding: 0.75rem 1rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span class="mafia-title pink-text" style="font-size: 0.65rem;">🎵 AMBIENT SIGNAL TRANSMITTER</span>
+                <button id="audio-btn" onclick="toggleAtmosphere()" class="btn-topup" style="background: rgba(220,38,38,0.3); border: 1px solid rgba(220,38,38,0.5); color:#fca5a5; padding: 0.2rem 0.6rem; cursor: pointer;">▶ PLAY AUDIO</button>
+            </div>
+        </section>
+
+        <!-- MENU OPERASI HITAM (PUSAT KOMANDO INTERAKTIF) -->
+        <section class="command-section mafia-card">
+            <div class="terminal-title">
+                <span class="mafia-title pink-text">☠️ PUSAT EKSEKUSI</span>
+                <span class="security-level blood-badge">RESTRICTED</span>
+            </div>
+
+            <div class="command-menu">
+                <!-- TAUTAN 1: Link Web Bebas -->
+                <a href="https://github.com/Robin-dv9999/My-Project4" target="_blank" class="op-btn" onclick="playDarkSound()">
+                    <span>⚔️ Pengerahan Pasukan Bayangan (Link Web)</span>
+                    <span class="arrow">↗</span>
+                </a>
+
+                <!-- TAUTAN 2: ARSIP FOTO / DOKUMEN RAHASIA (Bisa diisi link website/foto tujuanmu di href) -->
+                <a href="robin1.jpg" target="_blank" class="op-btn" onclick="playDarkSound()">
+                    <span>🔥 Arsip Foto / Dokumen Rahasia</span>
+                    <span class="arrow">🖼️</span>
+                </a>
+
+                <!-- TAUTAN 3: Form Rekrutmen Interaktif -->
+                <button type="button" class="op-btn" onclick="openRecruitModal()">
+                    <span>📜 Pendaftaran Rekrutmen / Pesan Rahasia</span>
+                    <span class="arrow">✍️</span>
+                </button>
+
+                <!-- TAUTAN 4: Menuju Store -->
+                <a href="https://robin-dv9999.github.io/My-Project4/" class="op-btn store-link-btn mafia-link-btn">
+                    <span>💼 Akses Gudang Senjata & Vault Store</span>
+                    <span class="arrow">→</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- LOG AKTIVITAS OPERASI TERMINAL -->
+        <section class="command-section mafia-card">
+            <div class="terminal-title">
+                <span class="mafia-title pink-text">📟 LIVE LOG OPERASI SYNDICATE</span>
+            </div>
+            <div id="activity-log" style="font-family: 'JetBrains Mono', monospace; font-size: 0.6rem; color: #a1a1aa; background: rgba(0,0,0,0.5); padding: 0.6rem; border-radius: 8px; border: 1px solid rgba(220,38,38,0.15); height: 60px; overflow-y: auto;">
+                > System initialized by Don Robin-DV...<br>
+                > Encrypted connection established.<br>
+            </div>
+        </section>
+
+        <!-- KELOMPOK CABANG / KAPTEN MAFIA -->
+        <section class="territory-section mafia-card">
+            <div class="terminal-title">
+                <span class="mafia-title pink-text">👥 KAPTEN WILAYAH UTAMA</span>
+            </div>
+            <div class="territory-list">
+                <a href="https://wa.me/" target="_blank" class="territory-item mafia-item" onclick="playDarkSound()">
+                    <div>
+                        <strong class="white-text">Caporegime Alpha ↗</strong>
+                        <small class="gray-text">Sektor Pelabuhan & Logistik Senjata</small>
+                    </div>
+                    <span class="badge-secured mafia-sec-badge">HUBUNGI</span>
+                </a>
+
+                <a href="https://github.com/robin-dv9999" target="_blank" class="territory-item mafia-item" onclick="playDarkSound()">
+                    <div>
+                        <strong class="white-text">Underboss Beta ↗</strong>
+                        <small class="gray-text">Pengamanan Jaringan & Keuangan Hitam</small>
+                    </div>
+                    <span class="badge-secured mafia-sec-badge">PROFIL</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- SUMPAH SETIA (OATH) -->
+        <section class="security-p2p-card mafia-oath-card" onclick="triggerBloodOath()">
+            <span class="red-text mafia-title">🩸 IKATAN SUMPAH DARAH</span>
+            <small id="oath-text" class="oath-sub">Sentuh untuk memperbarui sumpah setia kepada Don Robin-DV</small>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="syndicate-footer">
+            <p>The Dark Empire of <strong>ROBIN-DV</strong> • Omertà Code © 2026</p>
+        </footer>
+
+    </div>
+
+    <!-- MODAL FORM REKRUTMEN / PESAN RAHASIA -->
+    <div class="cart-modal-overlay" id="recruit-modal">
+        <div class="cart-modal" style="text-align: center;">
+            <div class="cart-header">
+                <h3 class="mafia-title red-text">📜 Kirim Pesan / Rekrutmen</h3>
+                <button class="close-btn" onclick="closeRecruitModal()">✕</button>
+            </div>
+            <p style="font-size: 0.65rem; color: #94a3b8; margin-bottom: 0.8rem;">Kirim transmisi rahasia langsung ke saluran pribadi Don Robin-DV</p>
+            <input type="text" id="recruit-name" placeholder="Nama / Alias Kamu" class="topup-input">
+            <textarea id="recruit-msg" placeholder="Tuliskan pesan rahasia kamu di sini..." class="topup-input" style="height: 70px; resize: none;"></textarea>
+            <button onclick="sendSecretMsg()" class="btn-whatsapp-checkout" style="background: rgba(220,38,38,0.8); width: 100%; margin: 0;">⚡ Kirim Transmisi</button>
+        </div>
+    </div>
+
+    <!-- TOAST NOTIFIKASI MAFIA -->
+    <div class="toast-notif mafia-toast" id="toast-notif">
+        <span>⚔️ Perintah Diterima, Don!</span>
+    </div>
+
+    <script>
+        // Jam Real-time
+        setInterval(() => {
+            const now = new Date();
+            document.getElementById('live-time').textContent = now.toTimeString().split(' ')[0];
+        }, 1000);
+
+        // Sound Generator
+        function playDarkSound() {
+            try {
+                const ctx = new (window.AudioContext || window.webkitAudioContext)();
+                const osc = ctx.createOscillator();
+                const gain = ctx.createGain();
+                osc.type = 'sawtooth';
+                osc.frequency.value = 140;
+                gain.gain.setValueAtTime(0.05, ctx.currentTime);
+                gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.25);
+                osc.connect(gain);
+                gain.connect(ctx.destination);
+                osc.start();
+                osc.stop(ctx.currentTime + 0.25);
+            } catch (e) {}
+        }
+
+        // Ambient Synthesizer
+        let audioPlaying = false;
+        let audioCtx, oscAmbient, gainAmbient;
+
+        function toggleAtmosphere() {
+            const btn = document.getElementById('audio-btn');
+            if (!audioPlaying) {
+                try {
+                    audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+                    oscAmbient = audioCtx.createOscillator();
+                    gainAmbient = audioCtx.createGain();
+                    oscAmbient.type = 'sine';
+                    oscAmbient.frequency.value = 55;
+                    gainAmbient.gain.setValueAtTime(0.03, audioCtx.currentTime);
+                    oscAmbient.connect(gainAmbient);
+                    gainAmbient.connect(audioCtx.destination);
+                    oscAmbient.start();
+                    audioPlaying = true;
+                    btn.textContent = '⏹ STOP AUDIO';
+                    showToast('🎶 Transmisi Ambient Aktif!');
+                } catch(e){}
+            } else {
+                if (oscAmbient) oscAmbient.stop();
+                audioPlaying = false;
+                btn.textContent = '▶ PLAY AUDIO';
+                showToast('⏹ Transmisi Ambient Dihentikan.');
+            }
+        }
+
+        // Live Log Simulation
+        const logs = [
+            'Patroli sektor utara melaporkan area 100% kondusif.',
+            'Pengiriman logistik vault telah dikunci enkripsi kuantum.',
+            'Merekam sinyal transmisi radio baru...',
+            'Meninjau kesetiaan para kapten wilayah.'
+        ];
+
+        setInterval(() => {
+            const logBox = document.getElementById('activity-log');
+            const randomLog = logs[Math.floor(Math.random() * logs.length)];
+            logBox.innerHTML += `> ${randomLog}<br>`;
+            logBox.scrollTop = logBox.scrollHeight;
+        }, 9000);
+
+        // Modal Handlers
+        function openRecruitModal() { playDarkSound(); document.getElementById('recruit-modal').style.display = 'flex'; }
+        function closeRecruitModal() { playDarkSound(); document.getElementById('recruit-modal').style.display = 'none'; }
+
+        function sendSecretMsg() {
+            const name = document.getElementById('recruit-name').value;
+            const msg = document.getElementById('recruit-msg').value;
+            if(name && msg) {
+                showToast('⚡ Transmisi rahasia terkirim ke Don Robin-DV!');
+                closeRecruitModal();
+            } else {
+                alert('Lengkapi nama dan pesan kamu, Bro!');
+            }
+        }
+
+        function triggerBloodOath() {
+            playDarkSound();
+            const oathEl = document.getElementById('oath-text');
+            oathEl.textContent = 'Memverifikasi ikatan darah... Loyal total kepada Don Robin-DV!';
+            setTimeout(() => {
+                oathEl.textContent = 'STATUS: Sumpah Darah Terikat Abadi (Omertà)';
+                showToast('🩸 Sumpah Kesetiaan Berhasil Diperbarui!');
+            }, 1200);
+        }
+
+        function showToast(text) {
+            const toast = document.getElementById('toast-notif');
+            toast.innerHTML = `<span>${text}</span>`;
+            toast.classList.add('show');
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 3500);
+        }
+    </script>
+</body>
+  </html>
+          
