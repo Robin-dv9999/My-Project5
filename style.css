@@ -1,1 +1,372 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    text-decoration: none;
+}
 
+body {
+    background-color: #010204;
+    background-image: linear-gradient(180deg, rgba(1, 2, 4, 0.95) 0%, rgba(5, 0, 2, 0.98) 100%), 
+                      url('https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=1200&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #e2e8f0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem 1rem;
+}
+
+.store-container {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 440px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+}
+
+/* Header Mafia */
+.store-header.mafia-header {
+    background: rgba(11, 5, 5, 0.92);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(220, 38, 38, 0.3);
+    padding: 0.9rem 1.1rem;
+    border-radius: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 5;
+}
+
+.brand-holder {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.store-logo.mafia-logo {
+    width: 42px;
+    height: 42px;
+    background: linear-gradient(135deg, #991b1b, #000);
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    border: 1px solid rgba(220, 38, 38, 0.4);
+}
+
+.mafia-title {
+    font-family: 'Cinzel', serif;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    font-weight: 800;
+    color: #f87171;
+}
+
+.brand-holder small {
+    font-size: 0.6rem;
+    color: #94a3b8;
+}
+
+.red-text { color: #ef4444; }
+.gold-glow { color: #fbbf24; font-family: 'JetBrains Mono', monospace; }
+.green-text { color: #10b981; }
+.pink-text { color: #fca5a5; }
+.white-text { color: #f8fafc; }
+.gray-text { color: #94a3b8; }
+
+.cart-badge-btn.mafia-badge {
+    background: rgba(220, 38, 38, 0.12);
+    border: 1px solid rgba(220, 38, 38, 0.3);
+    color: #f87171;
+    padding: 0.45rem 0.65rem;
+    border-radius: 10px;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 0.75rem;
+    position: relative;
+    z-index: 10;
+}
+
+/* Blood Badge */
+.blood-badge {
+    background: rgba(220, 38, 38, 0.15);
+    border: 1px solid rgba(220, 38, 38, 0.4);
+    color: #ef4444;
+}
+
+.flash-sale-bar {
+    padding: 0.6rem 0.8rem;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.68rem;
+    font-weight: 700;
+}
+
+.countdown-timer {
+    font-family: 'JetBrains Mono', monospace;
+}
+
+/* Stats Grid */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.7rem;
+}
+
+.stat-card.mafia-card {
+    background: rgba(11, 5, 5, 0.85);
+    border: 1px solid rgba(220, 38, 38, 0.2);
+    padding: 0.75rem;
+    border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.stat-card small {
+    font-size: 0.55rem;
+    font-weight: 700;
+}
+
+.stat-card strong {
+    font-size: 0.75rem;
+}
+
+/* Command Section & Territory */
+.command-section.mafia-card, .territory-section.mafia-card {
+    background: rgba(11, 5, 5, 0.85);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(220, 38, 38, 0.2);
+    border-radius: 18px;
+    padding: 1rem;
+    position: relative;
+    z-index: 5;
+}
+
+.terminal-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.68rem;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+}
+
+.security-level {
+    font-size: 0.55rem;
+    padding: 0.15rem 0.4rem;
+    border-radius: 6px;
+}
+
+.command-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    position: relative;
+    z-index: 10;
+}
+
+.op-btn {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(220, 38, 38, 0.2);
+    color: #e2e8f0;
+    padding: 0.75rem 0.9rem;
+    border-radius: 12px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+    text-align: left;
+}
+
+.op-btn:hover {
+    background: rgba(220, 38, 38, 0.15);
+    border-color: rgba(220, 38, 38, 0.4);
+    color: #fca5a5;
+}
+
+.mafia-link-btn {
+    border-color: rgba(220, 38, 38, 0.4);
+    color: #f87171;
+    background: rgba(220, 38, 38, 0.08);
+}
+
+.arrow { font-size: 0.65rem; color: #94a3b8; }
+
+/* Territory List */
+.territory-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.territory-item.mafia-item {
+    background: rgba(20, 0, 0, 0.4);
+    border: 1px solid rgba(220, 38, 38, 0.15);
+    padding: 0.65rem 0.8rem;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.2s ease;
+}
+
+.territory-item.mafia-item:hover {
+    background: rgba(220, 38, 38, 0.15);
+    border-color: rgba(220, 38, 38, 0.3);
+}
+
+.territory-item strong { display: block; font-size: 0.7rem; }
+.territory-item small { font-size: 0.58rem; }
+
+.badge-secured.mafia-sec-badge {
+    font-size: 0.55rem;
+    font-family: 'JetBrains Mono', monospace;
+    background: rgba(220, 38, 38, 0.2);
+    color: #f87171;
+    padding: 0.15rem 0.4rem;
+    border-radius: 6px;
+    border: 1px solid rgba(220, 38, 38, 0.4);
+}
+
+/* Oath Card */
+.security-p2p-card.mafia-oath-card {
+    background: rgba(15, 2, 2, 0.8);
+    border: 1px solid rgba(220, 38, 38, 0.3);
+    padding: 0.8rem;
+    border-radius: 14px;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    z-index: 5;
+}
+
+.security-p2p-card span {
+    display: block;
+    font-size: 0.68rem;
+    font-weight: 700;
+    margin-bottom: 0.2rem;
+}
+
+.oath-sub {
+    font-size: 0.58rem;
+    color: #a1a1aa;
+}
+
+/* Modals */
+.cart-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(8px);
+    z-index: 9999;
+    display: none;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.cart-modal {
+    width: 100%;
+    max-width: 440px;
+    background: #0b0505;
+    border-top: 1px solid rgba(220, 38, 38, 0.4);
+    border-radius: 20px 20px 0 0;
+    padding: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    max-height: 80vh;
+    position: relative;
+    z-index: 10000;
+}
+
+.cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    color: #94a3b8;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.topup-input {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(220, 38, 38, 0.3);
+    padding: 0.6rem;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 0.72rem;
+    outline: none;
+    margin-bottom: 0.8rem;
+}
+
+.btn-whatsapp-checkout {
+    background: #10b981;
+    border: none;
+    color: #fff;
+    padding: 0.75rem;
+    border-radius: 12px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 0.5rem;
+}
+
+/* Toast Notif Mafia */
+.toast-notif.mafia-toast {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%) translateY(100px);
+    background: rgba(15, 2, 2, 0.95);
+    border: 1px solid rgba(220, 38, 38, 0.4);
+    padding: 0.6rem 1rem;
+    border-radius: 12px;
+    font-size: 0.65rem;
+    color: #e2e8f0;
+    z-index: 10000;
+    transition: transform 0.3s ease;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.9);
+    white-space: nowrap;
+}
+
+.toast-notif.show {
+    transform: translateX(-50%) translateY(0);
+}
+
+/* Footer */
+.syndicate-footer {
+    text-align: center;
+    font-size: 0.62rem;
+    color: #64748b;
+    padding-top: 0.2rem;
+}
+
+.syndicate-footer strong { color: #ef4444; }
+  
